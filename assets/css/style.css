@@ -13,7 +13,7 @@
     margin-top: 80px;
   }
   .modos {
-    margin: 1% 0.5%;
+    margin: 2% 1%;
     position: fixed;
     top: 0;
     left: 0;
@@ -41,6 +41,7 @@
   }
   table.header tr th {
     width: 50%;
+    padding: 5%;
   }
   div.instrucoes {
     text-align: left;
@@ -61,7 +62,7 @@
   footer {
     text-align: center;
   }
-  .main button {
+  .btn-desistir {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     width: 20%;
@@ -69,33 +70,28 @@
     padding: 15px;
     color: #FFFFFF;
     background-color: #cb2027;
+    cursor: pointer;
   }
-  .botao:hover, .botao:active, .botao:focus {
-    background: #43A047;
-  }
-  .botao {
-    background: #4CAF50;
-    min-width: 120px;
-  }
+
 
 
   /** Estilo Noturno **/
-
+  
   body.noturno {
     color: #d8e6eb !important;
     background-color: #18191a !important;
   }
   .main.noturno {
+    box-shadow: none !important;
     background-color: #242526 !important;
   }
-  select {
-    border: 1px solid lightgray !important;
-  }
-  .btn-desistir.notruno{
-    color: #d8e6eb;
-    background-color: #242526 !important;
+  .btn-desistir.notruno {
+    color: #d8e6eb !important;
     border: solid 1px #3a3b3c !important;
   }
   .btn-desistir.noturno:hover {
     background-color: #3a3b3c !important; 
+  }
+  .modos {
+    color: #1f1f1f
   }
