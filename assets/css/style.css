@@ -1,0 +1,120 @@
+/** Estilo Normal **/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+    color: #1f1f1f;
+    background-color: #0976b4;
+    margin-top: 80px;
+  }
+  .modos {
+    margin: 1% 0.5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  img.icone {
+    width: 1em;
+    cursor: pointer;
+  }
+  .modos span {
+    background-color: white;
+    padding: 10px 10px;
+    display: inline;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+  }
+  .main {
+    background-color: white;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 30px;
+    padding: 30px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 15px;
+  }
+  table.header tr th {
+    width: 50%;
+  }
+  div.instrucoes {
+    text-align: left;
+    font-size: 0.8em;
+  }
+  p {
+    padding: 10px 10px 0;
+  }
+  select {
+    list-style-type: none;
+    text-align: left;
+    background-color: transparent;
+    margin: 10px 5px;
+    padding: 5px 10px;
+    border: 1px solid lightgray;
+    font-weight: normal;
+  }
+  footer {
+    text-align: center;
+  }
+  .main button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    width: 20%;
+    border: none;
+    padding: 15px;
+    color: #FFFFFF;
+    background-color: #cb2027;
+  }
+  .botao:hover, .botao:active, .botao:focus {
+    background: #43A047;
+  }
+  .botao {
+    background: #4CAF50;
+    min-width: 120px;
+  }
+
+
+  /** Estilo Noturno **/
+
+  body.noturno {
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+    color: #d8e6eb;
+    background-color: #18191a;
+    margin-top: 0;
+  }
+  .main.noturno {
+    background-color: #242526;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 15px;
+  }
+  select {
+    list-style-type: none;
+    text-align: left;
+    background-color: transparent;
+    margin: 10px 5px;
+    padding: 5px 10px;
+    border: 1px solid lightgray;
+    font-weight: normal;
+  }
+  .btn-desistir.notruno{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    width: 20%;
+    border: none;
+    padding: 15px;
+    color: #d8e6eb;
+    background-color: #242526;
+    border: solid 1px #3a3b3c;
+  }
+  .btn-desistir.noturno:hover {
+    background-color: #3a3b3c;
+  }

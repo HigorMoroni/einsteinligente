@@ -2,7 +2,8 @@
 
 ## Teste de QI de Einstein
 
-Diz-se que Albert Einstein criou este teste de QI (raciocínio lógico) no século passado e afirmou que apenas pessoas com QI acima de 150 conseguiram finalizá-lo, ou seja, na teoria 98% da população mundial **não** é capaz de resolvê-lo.
+Diz-se que Albert Einstein criou este teste de QI (Quociente de inteligência
+) no século passado e afirmou que apenas pessoas com QI acima de 150 conseguiram finalizá-lo, ou seja, na teoria 98% da população mundial **não** é capaz de resolvê-lo.
 Apesar de já ter sido refutada científicamente a teoria de que o teste de QI demonstra resultados significativos sobre nossa capacidade intelectual, **vale a pena** rever esse antigo puzzle e exercitar um pouco o raciocínio lógico.
 
 ## Regras básicas para resolver o teste
@@ -31,4 +32,4 @@ Apesar de já ter sido refutada científicamente a teoria de que o teste de QI d
 ### Se acha capaz de vencer o teste? 
 ### Pode tentar [Clicando Aqui](https://higormoroni.github.io/Einsteinligente/) 
 
-O teste está em fase de desenvolvimento! 
+_O teste está em fase de desenvolvimento!_ 
