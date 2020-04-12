@@ -82,39 +82,20 @@
   /** Estilo Noturno **/
 
   body.noturno {
-    margin: 0 auto;
-    font-family: 'Lato', sans-serif;
-    color: #d8e6eb;
-    background-color: #18191a;
-    margin-top: 0;
+    color: #d8e6eb !important;
+    background-color: #18191a !important;
   }
   .main.noturno {
-    background-color: #242526;
-    margin: 0 auto;
-    width: 80%;
-    margin-top: 30px;
-    padding: 30px;
-    border-radius: 15px;
+    background-color: #242526 !important;
   }
   select {
-    list-style-type: none;
-    text-align: left;
-    background-color: transparent;
-    margin: 10px 5px;
-    padding: 5px 10px;
-    border: 1px solid lightgray;
-    font-weight: normal;
+    border: 1px solid lightgray !important;
   }
   .btn-desistir.notruno{
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    width: 20%;
-    border: none;
-    padding: 15px;
     color: #d8e6eb;
-    background-color: #242526;
-    border: solid 1px #3a3b3c;
+    background-color: #242526 !important;
+    border: solid 1px #3a3b3c !important;
   }
   .btn-desistir.noturno:hover {
-    background-color: #3a3b3c;
+    background-color: #3a3b3c !important; 
   }
