@@ -30,3 +30,5 @@ Apesar de já ter sido refutada científicamente a teoria de que o teste de QI d
 
 ### Se acha capaz de vencer o teste? 
 ### Pode tentar [Clicando Aqui](https://higormoroni.github.io/Einsteinligente/) 
+
+O teste está em fase de desenvolvimento! 
