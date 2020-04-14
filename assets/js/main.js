@@ -74,8 +74,8 @@ let dom = {
             Object.keys(dom.casas).forEach((item) => {
                 if (dom.casas[item][0].value == 3) {
                     if (item != 'casa5') {
-                        const itemAnterior = 'casa'+(Number(item[4])+1)
-                        if (dom.casas[itemAnterior][0].value == 2) {
+                        const proximoItem = 'casa'+(Number(item[4])+1)
+                        if (dom.casas[proximoItem][0].value == 2) {
                             resDica = true
                         }
                     }
@@ -86,18 +86,175 @@ let dom = {
             } else {
                 dom.dicas[4].removeAttribute('checked', 'true')
             }
+        })(),(function dica5() {
+            //Dica 5 - O homem que vive na casa Verde bebe Café.
+            let resDica = false
+            Object.keys(dom.casas).forEach((item) => {
+                if (dom.casas[item][0].value == 3 && dom.casas[item][2].value == 1) {
+                    resDica = true
+                }
+            })
+            if (resDica) {
+                dom.dicas[5].setAttribute('checked', 'true')
+            } else {
+                dom.dicas[5].removeAttribute('checked', 'true')
+            }
+        })(),(function dica6() {
+            //Dica 6 - O homem que fuma Pall Mall cria Pássaros.
+            let resDica = false
+            Object.keys(dom.casas).forEach((item) => {
+                if (dom.casas[item][3].value == 3 && dom.casas[item][4].value == 3) {
+                    resDica = true
+                }
+            })
+            if (resDica) {
+                dom.dicas[6].setAttribute('checked', 'true')
+            } else {
+                dom.dicas[6].removeAttribute('checked', 'true')
+            }
+        })(),(function dica7() {
+            //Dica 7 - O homem que vive na casa Amarela fuma Dunhill.
+            let resDica = false
+            Object.keys(dom.casas).forEach((item) => {
+                if (dom.casas[item][0].value == 0 && dom.casas[item][3].value == 2) {
+                    resDica = true
+                }
+            })
+            if (resDica) {
+                dom.dicas[7].setAttribute('checked', 'true')
+            } else {
+                dom.dicas[7].removeAttribute('checked', 'true')
+            }
+        })(),(function dica8() {
+            //Dica 8 - O homem que vive na casa do meio bebe Leite.
+            if (dom.casas.casa3[2].value == 4) {
+                dom.dicas[8].setAttribute('checked', 'true')
+            } else {
+                dom.dicas[8].removeAttribute('checked', 'true')
+            }
+        })(),(function dica9() {
+            //Dica 9 - O homem que fuma Blends vive ao lado do que tem Gatos.
+            let resDica = false
+            Object.keys(dom.casas).forEach((item) => {
+                if (dom.casas[item][3].value == 0) {
+                    if (item != 'casa5') {
+                        const proximoItem = 'casa'+(Number(item[4])+1)
+                        if (dom.casas[proximoItem][4].value == 2) {
+                            resDica = true
+                        }
+                    }
+                    if (item != 'casa1') {
+                        const itemAnterior = 'casa'+(Number(item[4])-1)
+                        if (dom.casas[itemAnterior][4].value == 2) {
+                            resDica = true
+                        }
+                    }
+                }
+            })
+            if (resDica) {
+                dom.dicas[9].setAttribute('checked', 'true')
+            } else {
+                dom.dicas[9].removeAttribute('checked', 'true')
+            }
+        })(),(function dica10() {
+            //Dica 10 - O homem que cria Cavalos vive ao lado do que fuma Dunhill.
+            let resDica = false
+            Object.keys(dom.casas).forEach((item) => {
+                if (dom.casas[item][4].value == 1) {
+                    if (item != 'casa5') {
+                        const proximoItem = 'casa'+(Number(item[4])+1)
+                        if (dom.casas[proximoItem][3].value == 2) {
+                            resDica = true
+                        }
+                    }
+                    if (item != 'casa1') {
+                        const itemAnterior = 'casa'+(Number(item[4])-1)
+                        if (dom.casas[itemAnterior][3].value == 2) {
+                            resDica = true
+                        }
+                    }
+                }
+            })
+            if (resDica) {
+                dom.dicas[10].setAttribute('checked', 'true')
+            } else {
+                dom.dicas[10].removeAttribute('checked', 'true')
+            }
+        })(),(function dica11() {
+            //Dica 11 - O homem que fuma BlueMaster bebe Cerveja.
+            let resDica = false
+            Object.keys(dom.casas).forEach((item) => {
+                if (dom.casas[item][3].value == 1 && dom.casas[item][2].value == 2) {
+                    resDica = true
+                }
+            })
+            if (resDica) {
+                dom.dicas[11].setAttribute('checked', 'true')
+            } else {
+                dom.dicas[11].removeAttribute('checked', 'true')
+            }
+        })(),(function dica12() {
+            //Dica 12 - O Alemão fuma Prince.
+            let resDica = false
+            Object.keys(dom.casas).forEach((item) => {
+                if (dom.casas[item][1].value == 0 && dom.casas[item][3].value == 4) {
+                    resDica = true
+                }
+            })
+            if (resDica) {
+                dom.dicas[12].setAttribute('checked', 'true')
+            } else {
+                dom.dicas[12].removeAttribute('checked', 'true')
+            }
+        })(),(function dica13() {
+            //Dica 13 - O Norueguês vive ao lado da casa Azul.
+            let resDica = false
+            Object.keys(dom.casas).forEach((item) => {
+                if (dom.casas[item][1].value == 3) {
+                    if (item != 'casa5') {
+                        const proximoItem = 'casa'+(Number(item[4])+1)
+                        if (dom.casas[proximoItem][0].value == 1) {
+                            resDica = true
+                        }
+                    }
+                    if (item != 'casa1') {
+                        const itemAnterior = 'casa'+(Number(item[4])-1)
+                        if (dom.casas[itemAnterior][0].value == 1) {
+                            resDica = true
+                        }
+                    }
+                }
+            })
+            if (resDica) {
+                dom.dicas[13].setAttribute('checked', 'true')
+            } else {
+                dom.dicas[13].removeAttribute('checked', 'true')
+            }
+        })(),(function dica14() {
+            //Dica 14 - O homem que fuma Blends é vizinho do que bebe Água.
+            let resDica = false
+            Object.keys(dom.casas).forEach((item) => {
+                if (dom.casas[item][3].value == 0) {
+                    if (item != 'casa5') {
+                        const proximoItem = 'casa'+(Number(item[4])+1)
+                        if (dom.casas[proximoItem][2].value == 0) {
+                            resDica = true
+                        }
+                    }
+                    if (item != 'casa1') {
+                        const itemAnterior = 'casa'+(Number(item[4])-1)
+                        if (dom.casas[itemAnterior][2].value == 0) {
+                            resDica = true
+                        }
+                    }
+                }
+            })
+            if (resDica) {
+                dom.dicas[14].setAttribute('checked', 'true')
+            } else {
+                dom.dicas[14].removeAttribute('checked', 'true')
+            }
         })()
-        
-        //Dica 5 - O homem que vive na casa Verde bebe Café.
-        //Dica 6 - O homem que fuma Pall Mall cria Pássaros.
-        //Dica 7 - O homem que vive na casa Amarela fuma Dunhill.
-        //Dica 8 - O homem que vive na casa do meio bebe Leite.
-        //Dica 9 - O homem que fuma Blends vive ao lado do que tem Gatos.
-        //Dica 10 - O homem que cria Cavalos vive ao lado do que fuma Dunhill.
-        //Dica 11 - O homem que fuma BlueMaster bebe Cerveja.
-        //Dica 12 - O Alemão fuma Prince.
-        //Dica 13 - O Norueguês vive ao lado da casa Azul.
-        //Dica 14 - O homem que fuma Blends é vizinho do que bebe Água.
     }
 }
 function desistir() {
