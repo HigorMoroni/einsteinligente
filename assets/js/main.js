@@ -29,15 +29,15 @@ let dom = {
             this.dicas[0].removeAttribute('checked', 'true')
         }
         //Dica 1 - O Inglês vive na casa Vermelha.
-        for (let i in this.casas) {
-            console.log(this.casas.i)
-            if (this.casas.i[1].value == 2 && this.casas.i[0].value == 4) {
-                this.dicas[1].setAttribute('checked', 'true')
-            } else {
-            this.dicas[1].removeAttribute('checked', 'true')
+        let resDica1 = false
+        Object.keys(dom.casas).forEach(function(item){
+            if (this.casas[item][1].value == 2 && this.casas[item][0].value == 4) {
+                resDica1 = true
             }
-        }
+        }.bind(this))
+        resDica1 ? this.dicas[1].setAttribute('checked', 'true'): this.dicas[1].removeAttribute('checked', 'true')
         //Dica 2 - O Sueco tem Cachorros como animais de estimação.
+        
         //Dica 3 - O Dinamarquês bebe Chá.
         //Dica 4 - A casa Verde fica do lado esquerdo da casa Branca.
         //Dica 5 - O homem que vive na casa Verde bebe Café.
@@ -55,7 +55,31 @@ let dom = {
 function desistir() {
 
 }
-window.addEventListener('change', (e) => {
-    console.log(e)
+window.addEventListener('change', () => {
     dom.testarDicas()
 })
+
+// objTeste = {
+//     nome: 'Higor',
+//     sobrenome: 'Moroni',
+//     idade: 26,
+//     sexo: 'M',
+//     bonito: true,
+//     rico: false,
+//     saldo: 600.00,
+//     familia: {
+//         mae: 'Adalgisa',
+//         pai: 'Guilherme',
+//         esposa: {
+//             nome: 'Carla',
+//             idade: 28,
+//             bonita: true
+//         }
+//     },
+//     comer() {
+//         alert('Estou comendo')
+//     },
+//     dormir() {
+//         alert('Estou dormindo')
+//     }
+// }
