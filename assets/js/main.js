@@ -22,24 +22,72 @@ let dom = {
         this.btnDesistir.style.backgroundColor = '#242526'
     },
     testarDicas() {
-        //Dica 0 - O Norueguês vive na primeira casa.
-        if (this.casas.casa1[1].value == 3) {
-            this.dicas[0].setAttribute('checked', 'true')
-        } else {
-            this.dicas[0].removeAttribute('checked', 'true')
-        }
-        //Dica 1 - O Inglês vive na casa Vermelha.
-        let resDica1 = false
-        Object.keys(dom.casas).forEach(function(item){
-            if (this.casas[item][1].value == 2 && this.casas[item][0].value == 4) {
-                resDica1 = true
+        (function dica0() {
+            //Dica 0 - O Norueguês vive na primeira casa.
+            if (dom.casas.casa1[1].value == 3) {
+                dom.dicas[0].setAttribute('checked', 'true')
+            } else {
+                dom.dicas[0].removeAttribute('checked', 'true')
             }
-        }.bind(this))
-        resDica1 ? this.dicas[1].setAttribute('checked', 'true'): this.dicas[1].removeAttribute('checked', 'true')
-        //Dica 2 - O Sueco tem Cachorros como animais de estimação.
+        })(),(function dica1() {
+            //Dica 1 - O Inglês vive na casa Vermelha.
+            let resDica = false
+            Object.keys(dom.casas).forEach((item) => {
+                if (dom.casas[item][1].value == 2 && dom.casas[item][0].value == 4) {
+                    resDica = true
+                }
+            })
+            if (resDica) {
+                dom.dicas[1].setAttribute('checked', 'true')
+            } else {
+                dom.dicas[1].removeAttribute('checked', 'true')
+            }
+        })(),(function dica2() {
+            //Dica 2 - O Sueco tem Cachorros como animais de estimação.
+            let resDica = false
+            Object.keys(dom.casas).forEach((item) => {
+                if (dom.casas[item][1].value == 4 && dom.casas[item][4].value == 0) {
+                    resDica = true
+                }
+            })
+            if (resDica) {
+                dom.dicas[2].setAttribute('checked', 'true')
+            } else {
+                dom.dicas[2].removeAttribute('checked', 'true')
+            }
+        })(),(function dica3() {
+            //Dica 3 - O Dinamarquês bebe Chá.
+            let resDica = false
+            Object.keys(dom.casas).forEach((item) => {
+                if (dom.casas[item][1].value == 1 && dom.casas[item][2].value == 3) {
+                    resDica = true
+                }
+            })
+            if (resDica) {
+                dom.dicas[3].setAttribute('checked', 'true')
+            } else {
+                dom.dicas[3].removeAttribute('checked', 'true')
+            }
+        })(),(function dica4() {
+            //Dica 4 - A casa Verde fica do lado esquerdo da casa Branca.
+            let resDica = false
+            Object.keys(dom.casas).forEach((item) => {
+                if (dom.casas[item][0].value == 3) {
+                    if (item != 'casa5') {
+                        const itemAnterior = 'casa'+(Number(item[4])+1)
+                        if (dom.casas[itemAnterior][0].value == 2) {
+                            resDica = true
+                        }
+                    }
+                }
+            })
+            if (resDica) {
+                dom.dicas[4].setAttribute('checked', 'true')
+            } else {
+                dom.dicas[4].removeAttribute('checked', 'true')
+            }
+        })()
         
-        //Dica 3 - O Dinamarquês bebe Chá.
-        //Dica 4 - A casa Verde fica do lado esquerdo da casa Branca.
         //Dica 5 - O homem que vive na casa Verde bebe Café.
         //Dica 6 - O homem que fuma Pall Mall cria Pássaros.
         //Dica 7 - O homem que vive na casa Amarela fuma Dunhill.
