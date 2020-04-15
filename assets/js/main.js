@@ -263,28 +263,3 @@ function desistir() {
 window.addEventListener('change', () => {
     dom.testarDicas()
 })
-
-// objTeste = {
-//     nome: 'Higor',
-//     sobrenome: 'Moroni',
-//     idade: 26,
-//     sexo: 'M',
-//     bonito: true,
-//     rico: false,
-//     saldo: 600.00,
-//     familia: {
-//         mae: 'Adalgisa',
-//         pai: 'Guilherme',
-//         esposa: {
-//             nome: 'Carla',
-//             idade: 28,
-//             bonita: true
-//         }
-//     },
-//     comer() {
-//         alert('Estou comendo')
-//     },
-//     dormir() {
-//         alert('Estou dormindo')
-//     }
-// }
