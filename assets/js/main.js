@@ -255,11 +255,17 @@ let dom = {
                 dom.dicas[14].removeAttribute('checked', 'true')
             }
         })()
-    }
+    }, 
+    mudaCorDaCasa {
+      Object.keys(dom.casas).forEach((item) => {
+        if (dom.casas[item][0].value == -1) 
+      } 
+    } 
 }
 function desistir() {
 
 }
 window.addEventListener('change', () => {
     dom.testarDicas()
+    dom.mudaCorDaCasa()
 })
