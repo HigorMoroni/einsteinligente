@@ -255,12 +255,16 @@ let dom = {
                 dom.dicas[14].removeAttribute('checked', 'true')
             }
         })()
-    }, 
-    mudaCorDaCasa {
-      Object.keys(dom.casas).forEach((item) => {
-        if (dom.casas[item][0].value == -1) 
-      } 
-    } 
+    }, mudaCorDaCasa() {
+        Object.keys(dom.casas).forEach((item) => {
+            //if (dom.casas[item][0].value == -1)
+            //if (dom.casas[item][0].value == 0) 
+            if (dom.casas[item][0].value == 1) (dom.casas[item][0].parentNode).parentNode.style.backgroundColor = 'blue'
+            //if (dom.casas[item][0].value == 2) 
+            //if (dom.casas[item][0].value == 3) 
+        })
+    }
+     
 }
 function desistir() {
 
