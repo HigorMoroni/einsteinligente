@@ -2,6 +2,7 @@ let dom = {
     divMain: document.querySelector('div.main'),
     btnDesistir: document.querySelector('.btn-desistir'),
     dicas: document.querySelectorAll('input.dicas'),
+    todasAsCasas: document.querySelectorAll('div.quiz th'),
     casas: {
         casa1: document.querySelectorAll('select.casa1'),
         casa2: document.querySelectorAll('select.casa2'),
@@ -14,12 +15,16 @@ let dom = {
         this.divMain.classList.remove('noturno')
         this.btnDesistir.classList.remove('noturno')
         this.btnDesistir.style.backgroundColor = '#cb2027'
+        for (let i=1;i<=5;i++) this.todasAsCasas[i].classList.remove('noturno')
+        dom.mudaCorDaCasa()
     },
     ativaNoturno() {
         document.body.classList.add('noturno')
         this.divMain.classList.add('noturno')
         this.btnDesistir.classList.add('noturno')
         this.btnDesistir.style.backgroundColor = '#242526'
+        for (let i=1;i<=5;i++) this.todasAsCasas[i].classList.add('noturno')
+        dom.mudaCorDaCasa()
     },
     testarDicas() {
         (function dica0() {
@@ -256,12 +261,34 @@ let dom = {
             }
         })()
     }, mudaCorDaCasa() {
-        Object.keys(dom.casas).forEach((item) => {
-            //if (dom.casas[item][0].value == -1)
-            //if (dom.casas[item][0].value == 0) 
-            if (dom.casas[item][0].value == 1) (dom.casas[item][0].parentNode).parentNode.style.backgroundColor = 'blue'
-            //if (dom.casas[item][0].value == 2) 
-            //if (dom.casas[item][0].value == 3) 
+        Object.keys(this.casas).forEach((item) => {
+            const objCasa = this.casas[item][0]
+            const objColuna = this.todasAsCasas[item[4]]
+            if (objCasa.value == -1) {
+                if (this.divMain.classList[1]=='noturno') {
+                    objColuna.style.backgroundColor = '#242526'
+                    objColuna.style.color = '#d8e6eb'
+                } else {
+                    objColuna.style.backgroundColor = 'white'
+                    objColuna.style.color = 'black'
+                }
+            } else if (objCasa.value == 0) {
+                objColuna.style.backgroundColor = 'yellow'
+                objColuna.style.color = 'white'
+            } else if (objCasa.value == 1) {
+                objColuna.style.backgroundColor = 'blue'
+                objColuna.style.color = 'white'
+            } else if (objCasa.value == 2) {
+                objColuna.style.backgroundColor = 'white'
+                objColuna.style.color = 'black'
+            }
+              else if (objCasa.value == 3) {
+                objColuna.style.backgroundColor = 'green'
+                objColuna.style.color = 'white'
+            } else {
+                objColuna.style.backgroundColor = 'red'
+                objColuna.style.color = 'white'
+            }
         })
     }
      
