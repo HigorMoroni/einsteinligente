@@ -273,20 +273,20 @@ let dom = {
                     objColuna.style.color = 'black'
                 }
             } else if (objCasa.value == 0) {
-                objColuna.style.backgroundColor = 'yellow'
+                objColuna.style.backgroundColor = '#ffc113'
                 objColuna.style.color = 'white'
             } else if (objCasa.value == 1) {
-                objColuna.style.backgroundColor = 'blue'
+                objColuna.style.backgroundColor = '#1166e8'
                 objColuna.style.color = 'white'
             } else if (objCasa.value == 2) {
                 objColuna.style.backgroundColor = 'white'
                 objColuna.style.color = 'black'
             }
               else if (objCasa.value == 3) {
-                objColuna.style.backgroundColor = 'green'
+                objColuna.style.backgroundColor = '#009c58'
                 objColuna.style.color = 'white'
             } else {
-                objColuna.style.backgroundColor = 'red'
+                objColuna.style.backgroundColor = '#da4d39'
                 objColuna.style.color = 'white'
             }
         })
