@@ -10,6 +10,11 @@ let dom = {
         casa4: document.querySelectorAll('select.casa4'),
         casa5: document.querySelectorAll('select.casa5'),
     },
+    modal: {
+        div: document.getElementById("myModal"),
+        span: document.getElementsByClassName("close")[0],
+        texto: document.querySelector('p#modal')
+    },
     ativaDiurno() {
         document.body.classList.remove('noturno')
         this.divMain.classList.remove('noturno')
@@ -259,6 +264,22 @@ let dom = {
             } else {
                 dom.dicas[14].removeAttribute('checked', 'true')
             }
+        })(),(function todasAsDicas(){
+            //Testa se todas as dicas foram seguidas e se a casa 4 tem um animal
+            let tudoOk = true
+            for (let i = 0; i < dom.dicas.length; i++) {
+                console.log(dom.dicas[i].getAttribute('checked'))
+                if (dom.dicas[i].getAttribute('checked') == null) {
+                    tudoOk = false
+                    break
+                }
+            }
+            
+            console.log(tudoOk)
+            if (tudoOk&&dom.casas['casa4'][4].value != -1) {
+                dom.modal.texto.innerHTML = `<strong>Parabens!</strong><br/><p>Você faz parte do seleto grupo de pessoas que consegue terminar o teste.<br/>Desafie seus amigos.</p>`
+                dom.modal.div.style.display = "block"
+            }
         })()
     }, mudaCorDaCasa() {
         Object.keys(this.casas).forEach((item) => {
@@ -303,10 +324,35 @@ let dom = {
             if (this.casas[`casa${i}`][ocorrencia[2]].value == valorOcorrencia) this.casas[`casa${i}`][ocorrencia[2]].value = -1
             if (ocorrencia[2]==0) dom.mudaCorDaCasa()
         }
+    }, desistir() {
+        const desistiu = confirm('Tem certeza que quer desistir?')
+        if (desistiu) {
+            this.modal.texto.innerHTML = `<strong>Oh não, Você desistiu!</strong><br/><p>Mas vai ficar tudo bem, você pode tentar novamente.<br/>Desafie seus amigos.</p>`
+            this.modal.div.style.display = "block"
+            for (let i=1;i<=5;i++) {
+                for (let j=0;j<5;j++) {
+                    const objColuna = this.todasAsCasas[i]
+                    this.casas[`casa${i}`][j].value=-1
+                    if (this.divMain.classList[1]=='noturno') {
+                        objColuna.style.backgroundColor = '#242526'
+                        objColuna.style.color = '#d8e6eb'
+                    } else {
+                        objColuna.style.backgroundColor = 'white'
+                        objColuna.style.color = 'black'
+                    }
+                }
+                
+            }
+        }
     }
 }
-function desistir() {
-
+dom.modal.span.onclick = function() {
+    dom.modal.div.style.display = "none"
+}
+window.onclick = function(event) {
+    if(event.target == dom.modal.div) {
+        dom.modal.div.style.display = "none"
+    }
 }
 window.addEventListener('change', (e) => {
     dom.testarDicas()
