@@ -268,14 +268,11 @@ let dom = {
             //Testa se todas as dicas foram seguidas e se a casa 4 tem um animal
             let tudoOk = true
             for (let i = 0; i < dom.dicas.length; i++) {
-                console.log(dom.dicas[i].getAttribute('checked'))
                 if (dom.dicas[i].getAttribute('checked') == null) {
                     tudoOk = false
                     break
                 }
             }
-            
-            console.log(tudoOk)
             if (tudoOk&&dom.casas['casa4'][4].value != -1) {
                 dom.modal.texto.innerHTML = `<strong>Parabens!</strong><br/><p>Você faz parte do seleto grupo de pessoas que consegue terminar o teste.<br/>Desafie seus amigos.</p>`
                 dom.modal.div.style.display = "block"
