@@ -290,13 +290,26 @@ let dom = {
                 objColuna.style.color = 'white'
             }
         })
+    }, testarRepeticao(e) {
+        let ocorrencia = e.target.name.split(' ')
+        const valorOcorrencia = e.target.value
+        if (ocorrencia[0]=='cores') ocorrencia[2]=0
+        else if (ocorrencia[0]=='nacionalidades') ocorrencia[2]=1
+        else if (ocorrencia[0]=='bebidas') ocorrencia[2]=2
+        else if (ocorrencia[0]=='cigarros') ocorrencia[2]=3
+        else if (ocorrencia[0]=='animais') ocorrencia[2]=4
+        for (let i=1;i<=5;i++) {
+            if (i==ocorrencia[1]) continue
+            if (this.casas[`casa${i}`][ocorrencia[2]].value == valorOcorrencia) this.casas[`casa${i}`][ocorrencia[2]].value = -1
+            if (ocorrencia[2]==0) dom.mudaCorDaCasa()
+        }
     }
-     
 }
 function desistir() {
 
 }
-window.addEventListener('change', () => {
+window.addEventListener('change', (e) => {
     dom.testarDicas()
     dom.mudaCorDaCasa()
+    dom.testarRepeticao(e)
 })
