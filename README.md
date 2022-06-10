@@ -30,4 +30,4 @@ Apesar de já ter sido refutada científicamente a teoria de que o teste de QI d
 - [ ] O homem que fuma Blends é vizinho do que bebe Água.
 
 ### Se acha capaz de vencer o teste? 
-### Pode tentar [Clicando Aqui](https://higormoroni.github.io/Einsteinligente/) 
+### Pode tentar [Clicando Aqui](https://higor.dev/einsteinligente/) 
